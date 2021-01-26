@@ -1,10 +1,8 @@
 server:
-  port: 4000
-
-
+  port: 6000
 spring:
   application:
-    name: atguigu-consumer
+    name: atguigu-consumer-feign
 eureka:
   client:
     service-url:

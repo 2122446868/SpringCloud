@@ -1,6 +1,6 @@
 package com.atguigu.spring.cloud.handler;
 
-import com.atguigu.spring.cloud.Employee;
+import com.atguigu.spring.cloud.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,7 +25,9 @@ public class HumanResouceHandler {
     @RequestMapping("/consumer/get/emoloyee/remote")
     public Employee getEmployee(){
 //        1、远程调用方法的主机地址
-        String host ="http://localhost:1000";
+//        String host ="http://localhost:1000";
+//        引入Eureka和Ribbon后，就可以使用微服务名称代替ip地址+端口号
+        String host = "http://atguigu-provider";
 //        2、远程调用方法的具体URL地址
         String url="/provider/get/employee/remote";
 //        3、通过RestTemplate调用远程微服务

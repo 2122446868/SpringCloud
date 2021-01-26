@@ -1,4 +1,4 @@
-package com.atguigu.spring.cloud;
+package com.atguigu.spring.cloud.entity;
 
 /**
  * Employee

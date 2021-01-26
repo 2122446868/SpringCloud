@@ -1,8 +1,10 @@
 package com.atguigu.spring.cloud.handler;
 
-import com.atguigu.spring.cloud.Employee;
+import com.atguigu.spring.cloud.entity.Employee;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * EmployeeHandler
@@ -20,4 +22,11 @@ public class EmployeeHandler {
     public Employee getEmployeeRemote() {
         return new Employee(555, "tom555", 555.555);
     }
+
+//    @RequestMapping("/provider/get/employee/remote")
+//    public Employee getEmployeeRemote(HttpServletRequest request) {
+////        获取当前服务的端口号
+//        int port = request.getServerPort();
+//        return new Employee(555, "tom555" + port, 555.555);
+//    }
 }
