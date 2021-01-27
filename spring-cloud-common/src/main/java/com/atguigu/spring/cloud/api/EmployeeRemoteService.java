@@ -1,4 +1,4 @@
-package com.atguigu.spring.cloud.entity.api;
+package com.atguigu.spring.cloud.api;
 
 import com.atguigu.spring.cloud.entity.Employee;
 import org.springframework.cloud.openfeign.FeignClient;

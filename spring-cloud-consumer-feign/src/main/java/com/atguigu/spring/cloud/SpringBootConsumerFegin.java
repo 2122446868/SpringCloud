@@ -18,6 +18,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 public class SpringBootConsumerFegin {
     public static void main(String[] args) {
-        SpringApplication.run(SpringBootConsumerFegin.class, args);
+        SpringApplication.run(SpringBootConsumerFegin.class,args);
     }
 }

@@ -1,8 +1,7 @@
 package com.atguigu.spring.cloud.handler;
 
 import com.atguigu.spring.cloud.entity.Employee;
-import com.atguigu.spring.cloud.entity.api.EmployeeRemoteService;
-import com.netflix.discovery.converters.Auto;
+import com.atguigu.spring.cloud.api.EmployeeRemoteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
