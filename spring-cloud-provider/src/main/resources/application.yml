@@ -9,3 +9,10 @@ eureka:
   client:
     service-url: #配置当前微服务作为Eureka客户端访问Eureka服务器端时使用的地址
       defaultZone: http://localhost:5000/eureka/
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream

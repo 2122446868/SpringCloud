@@ -2,9 +2,14 @@ package com.atguigu.spring.cloud.handler;
 
 import com.atguigu.spring.cloud.entity.Employee;
 import com.atguigu.spring.cloud.api.EmployeeRemoteService;
+import com.atguigu.spring.cloud.util.ResultEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.xml.transform.Result;
+import java.util.List;
 
 /**
  * EmployeeFeignHandler
@@ -22,8 +27,14 @@ public class EmployeeFeignHandler {
     private EmployeeRemoteService employeeRemoteService;
 
     @RequestMapping("/feign/consumer/get/emp")
-    public Employee getEmployeeRemote(){
-        return employeeRemoteService.getEmployeeRemote();
+    public ResultEntity<Employee> getEmployeeRemote(String signal){
+       return employeeRemoteService.getEmployeeRemote(signal);
 
+    }
+
+    @RequestMapping("/provide/get/emp/list/remote")
+    public List<Employee> getEmployeeListRemote( String keyword){
+
+        return employeeRemoteService.getEmployeeListRemote(keyword);
     }
 }
